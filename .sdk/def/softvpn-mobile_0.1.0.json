@@ -1,0 +1,223 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SoftVPN Mobile API",
+    "description": "This API provides access to the SoftVPN mobile application, offering functionalities such as retrieving a list of VPN servers. It is designed for developers looking to integrate SoftVPN features into their applications quickly and effectively.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/softvpn"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://74.119.194.157/api/v1",
+      "description": "SoftVPN API Server"
+    }
+  ],
+  "paths": {
+    "/request-ip": {
+      "get": {
+        "summary": "Get IP Request Info",
+        "description": "Retrieves information about the requesting IP address",
+        "operationId": "getRequestIp",
+        "tags": [
+          "Request Info"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with IP request information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ip": {
+                      "type": "string",
+                      "description": "The IP address of the requester",
+                      "example": "192.168.1.1"
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "Country of the IP address",
+                      "example": "United States"
+                    },
+                    "region": {
+                      "type": "string",
+                      "description": "Region or state",
+                      "example": "California"
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "City",
+                      "example": "San Francisco"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers": {
+      "get": {
+        "summary": "Get VPN Servers List",
+        "description": "Retrieves a list of available VPN servers from the SoftVPN network",
+        "operationId": "getServersList",
+        "tags": [
+          "Servers"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of VPN servers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VPNServer"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VPNServer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the server"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the server"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country where the server is located"
+          },
+          "countryCode": {
+            "type": "string",
+            "description": "ISO country code"
+          },
+          "city": {
+            "type": "string",
+            "description": "City where the server is located"
+          },
+          "host": {
+            "type": "string",
+            "description": "Server hostname or IP address"
+          },
+          "port": {
+            "type": "integer",
+            "description": "Server port number"
+          },
+          "protocol": {
+            "type": "string",
+            "description": "VPN protocol used by the server",
+            "enum": [
+              "OpenVPN",
+              "IKEv2",
+              "WireGuard",
+              "L2TP"
+            ]
+          },
+          "premium": {
+            "type": "boolean",
+            "description": "Whether this is a premium server"
+          },
+          "load": {
+            "type": "integer",
+            "description": "Server load percentage",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "online": {
+            "type": "boolean",
+            "description": "Whether the server is currently online"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "code": {
+            "type": "string",
+            "description": "Error code"
+          },
+          "message": {
+            "type": "string",
+            "description": "Detailed error message"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Servers",
+      "description": "Operations related to VPN servers"
+    },
+    {
+      "name": "Request Info",
+      "description": "Operations related to request information"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository Documentation",
+    "url": "https://github.com/l0v3m0n3y/softvpn"
+  }
+}

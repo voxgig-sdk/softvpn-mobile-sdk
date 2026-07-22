@@ -1,0 +1,92 @@
+# Entity: server
+
+main: kit: entity: server: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "city"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country_code"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "host"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "id"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "load"
+      req: false
+      type: "`$INTEGER`"
+    }
+    {
+      name: "name"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "online"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "port"
+      req: false
+      type: "`$INTEGER`"
+    }
+    {
+      name: "premium"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "protocol"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "server"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          method: "GET"
+          orig: "/servers"
+          parts: [
+            "servers"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

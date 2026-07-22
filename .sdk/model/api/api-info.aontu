@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/softvpn"
+      }
+      description: "This API provides access to the SoftVPN mobile application, offering functionalities such as retrieving a list of VPN servers. It is designed for developers looking to integrate SoftVPN features into their applications quickly and effectively."
+      servers: [
+        {
+          description: "SoftVPN API Server"
+          url: "http://74.119.194.157/api/v1"
+        }
+      ]
+      summary: "This API provides access to the SoftVPN mobile application, offering functionalities such as retrieving a list of VPN servers."
+      title: "SoftVPN Mobile API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/softvpn"
+    }
+  }
+}
+
