@@ -23,8 +23,8 @@ module SoftvpnMobileTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("SOFTVPNMOBILE_TEST_LIVE")
-    override = getenv("SOFTVPNMOBILE_TEST_OVERRIDE")
+    live = getenv("SOFTVPN_MOBILE_TEST_LIVE")
+    override = getenv("SOFTVPN_MOBILE_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module SoftvpnMobileTestRunner
       end
     end
 
-    explain = getenv("SOFTVPNMOBILE_TEST_EXPLAIN")
-    m["SOFTVPNMOBILE_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("SOFTVPN_MOBILE_TEST_EXPLAIN")
+    m["SOFTVPN_MOBILE_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# SoftvpnMobile SDK exists test
 
 import pytest
 from softvpnmobile_sdk import SoftvpnMobileSDK

@@ -60,11 +60,11 @@ function request_info_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["SOFTVPNMOBILE_TEST_REQUEST_INFO_ENTID"] = {},
-    ["SOFTVPNMOBILE_TEST_LIVE"] = "FALSE",
+    ["SOFTVPN_MOBILE_TEST_REQUEST_INFO_ENTID"] = {},
+    ["SOFTVPN_MOBILE_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["SOFTVPNMOBILE_TEST_LIVE"] == "TRUE"
+  local live = env["SOFTVPN_MOBILE_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

@@ -66,11 +66,11 @@ function server_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "SOFTVPNMOBILE_TEST_SERVER_ENTID" => [],
-        "SOFTVPNMOBILE_TEST_LIVE" => "FALSE",
+        "SOFTVPN_MOBILE_TEST_SERVER_ENTID" => [],
+        "SOFTVPN_MOBILE_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["SOFTVPNMOBILE_TEST_LIVE"] === "TRUE";
+    $live = $env["SOFTVPN_MOBILE_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

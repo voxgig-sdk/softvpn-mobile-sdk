@@ -19,11 +19,15 @@ import {
 describe('ServerDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when SOFTVPNMOBILE_TEST_LIVE=TRUE.
-  afterEach(liveDelay('SOFTVPNMOBILE_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when SOFTVPN_MOBILE_TEST_LIVE=TRUE.
+  afterEach(liveDelay('SOFTVPN_MOBILE_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new SoftvpnMobileSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -77,17 +81,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'SOFTVPNMOBILE_TEST_SERVER_ENTID': {},
-    'SOFTVPNMOBILE_TEST_LIVE': 'FALSE',
+    'SOFTVPN_MOBILE_TEST_SERVER_ENTID': {},
+    'SOFTVPN_MOBILE_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.SOFTVPNMOBILE_TEST_LIVE
+  const live = 'TRUE' === env.SOFTVPN_MOBILE_TEST_LIVE
 
   if (live) {
     const client = new SoftvpnMobileSDK({
     })
 
-    let idmap: any = env['SOFTVPNMOBILE_TEST_SERVER_ENTID']
+    let idmap: any = env['SOFTVPN_MOBILE_TEST_SERVER_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

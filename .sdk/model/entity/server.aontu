@@ -16,7 +16,7 @@ main: kit: entity: server: {
       type: "`$STRING`"
     }
     {
-      name: "country_code"
+      name: "countryCode"
       req: false
       type: "`$STRING`"
     }

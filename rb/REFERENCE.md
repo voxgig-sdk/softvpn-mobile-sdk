@@ -154,7 +154,7 @@ server = client.Server
 | --- | --- | --- | --- |
 | `city` | `String` | No |  |
 | `country` | `String` | No |  |
-| `country_code` | `String` | No |  |
+| `countryCode` | `String` | No |  |
 | `host` | `String` | No |  |
 | `id` | `String` | No |  |
 | `load` | `Integer` | No |  |

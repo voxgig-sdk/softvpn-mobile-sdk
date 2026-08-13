@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'SoftvpnMobile',
   }
 
 
@@ -95,6 +95,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/request-ip",
               "parts": [
@@ -133,7 +134,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "country_code",
+          "name": "countryCode",
           "req": false,
           "type": "`$STRING`",
           "index$": 2
@@ -204,6 +205,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/servers",
               "parts": [

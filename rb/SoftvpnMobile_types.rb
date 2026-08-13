@@ -58,7 +58,7 @@ RequestInfoLoadMatch = Struct.new(
 # @!attribute [rw] country
 #   @return [String, nil]
 #
-# @!attribute [rw] country_code
+# @!attribute [rw] countryCode
 #   @return [String, nil]
 #
 # @!attribute [rw] host
@@ -87,7 +87,7 @@ RequestInfoLoadMatch = Struct.new(
 Server = Struct.new(
   :city,
   :country,
-  :country_code,
+  :countryCode,
   :host,
   :id,
   :load,
@@ -107,7 +107,7 @@ Server = Struct.new(
 # @!attribute [rw] country
 #   @return [String, nil]
 #
-# @!attribute [rw] country_code
+# @!attribute [rw] countryCode
 #   @return [String, nil]
 #
 # @!attribute [rw] host
@@ -136,7 +136,7 @@ Server = Struct.new(
 ServerListMatch = Struct.new(
   :city,
   :country,
-  :country_code,
+  :countryCode,
   :host,
   :id,
   :load,

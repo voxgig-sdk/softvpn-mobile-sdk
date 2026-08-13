@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import SoftvpnMobileSDK
-from core.error import SoftvpnMobileError
-from core.result import SoftvpnMobileResult
-from core.response import SoftvpnMobileResponse
-from core.spec import SoftvpnMobileSpec
-from feature.base_feature import SoftvpnMobileBaseFeature
+from projectname_sdk.core.error import SoftvpnMobileError
+from projectname_sdk.core.result import SoftvpnMobileResult
+from projectname_sdk.core.response import SoftvpnMobileResponse
+from projectname_sdk.core.spec import SoftvpnMobileSpec
+from projectname_sdk.feature.base_feature import SoftvpnMobileBaseFeature
 
 
 def _client():

@@ -21,7 +21,7 @@
 ---@class Server
 ---@field city? string
 ---@field country? string
----@field country_code? string
+---@field countryCode? string
 ---@field host? string
 ---@field id? string
 ---@field load? number
@@ -34,7 +34,7 @@
 ---@class ServerListMatch
 ---@field city? string
 ---@field country? string
----@field country_code? string
+---@field countryCode? string
 ---@field host? string
 ---@field id? string
 ---@field load? number

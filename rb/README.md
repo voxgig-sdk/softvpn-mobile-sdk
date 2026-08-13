@@ -34,7 +34,7 @@ client = SoftvpnMobileSDK.new
 
 ```ruby
 begin
-  # load returns the bare RequestInfo record (raises on error).
+  # load returns the ENTITY — call data_get for the RequestInfo record (raises on error).
   requestinfo = client.RequestInfo.load()
   puts requestinfo
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = SoftvpnMobileSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 requestinfo = client.RequestInfo.load()
 puts requestinfo
 ```
@@ -251,7 +252,7 @@ API path: `/request-ip`
 | --- | --- |
 | `city` |  |
 | `country` |  |
-| `country_code` |  |
+| `countryCode` |  |
 | `host` |  |
 | `id` |  |
 | `load` |  |
@@ -292,7 +293,7 @@ Create an instance: `request_info = client.RequestInfo`
 #### Example: Load
 
 ```ruby
-# load returns the bare RequestInfo record (raises on error).
+# load returns the ENTITY — call data_get for the RequestInfo record (raises on error).
 request_info = client.RequestInfo.load()
 ```
 
@@ -313,7 +314,7 @@ Create an instance: `server = client.Server`
 | --- | --- | --- |
 | `city` | `String` |  |
 | `country` | `String` |  |
-| `country_code` | `String` |  |
+| `countryCode` | `String` |  |
 | `host` | `String` |  |
 | `id` | `String` |  |
 | `load` | `Integer` |  |

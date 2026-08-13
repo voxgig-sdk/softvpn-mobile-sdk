@@ -26,8 +26,8 @@ import {
 describe('RequestInfoEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when SOFTVPNMOBILE_TEST_LIVE=TRUE.
-  afterEach(liveDelay('SOFTVPNMOBILE_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when SOFTVPN_MOBILE_TEST_LIVE=TRUE.
+  afterEach(liveDelay('SOFTVPN_MOBILE_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = SoftvpnMobileSDK.test()
@@ -62,7 +62,7 @@ describe('RequestInfoEntity', async () => {
     // LOAD
     const request_info_ref01_ent = client.RequestInfo()
     const request_info_ref01_match_dt0: any = {}
-    const request_info_ref01_data_dt0 = await request_info_ref01_ent.load(request_info_ref01_match_dt0)
+    const request_info_ref01_data_dt0 = (await request_info_ref01_ent.load(request_info_ref01_match_dt0)).data()
     assert(null != request_info_ref01_data_dt0)
 
 

@@ -4,7 +4,7 @@
       "SERVER00": {
         "city": "s6e",
         "country": "s6f",
-        "country_code": "s70",
+        "countryCode": "s70",
         "host": "s71",
         "id": "SERVER00",
         "load": "s73",
@@ -17,7 +17,7 @@
       "SERVER01": {
         "city": "sdc",
         "country": "sdd",
-        "country_code": "sde",
+        "countryCode": "sde",
         "host": "sdf",
         "id": "SERVER01",
         "load": "se1",
@@ -30,7 +30,7 @@
       "SERVER02": {
         "city": "s14a",
         "country": "s14b",
-        "country_code": "s14c",
+        "countryCode": "s14c",
         "host": "s14d",
         "id": "SERVER02",
         "load": "s14f",
@@ -47,7 +47,7 @@
       "server_ref01": {
         "city": "s1b8",
         "country": "s1b9",
-        "country_code": "s1ba",
+        "countryCode": "s1ba",
         "host": "s1bb",
         "load": "s1bd",
         "name": "s1be",

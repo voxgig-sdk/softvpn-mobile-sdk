@@ -147,7 +147,7 @@ server = client.Server()
 | --- | --- | --- | --- |
 | `city` | `str` | No |  |
 | `country` | `str` | No |  |
-| `country_code` | `str` | No |  |
+| `countryCode` | `str` | No |  |
 | `host` | `str` | No |  |
 | `id` | `str` | No |  |
 | `load` | `int` | No |  |

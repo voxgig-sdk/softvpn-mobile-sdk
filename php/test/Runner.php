@@ -43,8 +43,8 @@ class SoftvpnMobileTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('SOFTVPNMOBILE_TEST_LIVE');
-        $override = self::getenv('SOFTVPNMOBILE_TEST_OVERRIDE');
+        $live = self::getenv('SOFTVPN_MOBILE_TEST_LIVE');
+        $override = self::getenv('SOFTVPN_MOBILE_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class SoftvpnMobileTestRunner
             }
         }
 
-        $explain = self::getenv('SOFTVPNMOBILE_TEST_EXPLAIN');
+        $explain = self::getenv('SOFTVPN_MOBILE_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['SOFTVPNMOBILE_TEST_EXPLAIN'] = $explain;
+            $m['SOFTVPN_MOBILE_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

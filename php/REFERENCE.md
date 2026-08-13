@@ -153,7 +153,7 @@ $server = $client->Server();
 | --- | --- | --- | --- |
 | `city` | `string` | No |  |
 | `country` | `string` | No |  |
-| `country_code` | `string` | No |  |
+| `countryCode` | `string` | No |  |
 | `host` | `string` | No |  |
 | `id` | `string` | No |  |
 | `load` | `int` | No |  |

@@ -243,7 +243,7 @@ API path: `/request-ip`
 | --- | --- |
 | `city` |  |
 | `country` |  |
-| `country_code` |  |
+| `countryCode` |  |
 | `host` |  |
 | `id` |  |
 | `load` |  |
@@ -304,7 +304,7 @@ Create an instance: `local server = client:Server(nil)`
 | --- | --- | --- |
 | `city` | `string` |  |
 | `country` | `string` |  |
-| `country_code` | `string` |  |
+| `countryCode` | `string` |  |
 | `host` | `string` |  |
 | `id` | `string` |  |
 | `load` | `number` |  |

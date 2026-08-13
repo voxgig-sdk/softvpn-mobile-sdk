@@ -35,7 +35,7 @@ class Server
 {
     public ?string $city = null;
     public ?string $country = null;
-    public ?string $country_code = null;
+    public ?string $countryCode = null;
     public ?string $host = null;
     public ?string $id = null;
     public ?int $load = null;
@@ -51,7 +51,7 @@ class ServerListMatch
 {
     public ?string $city = null;
     public ?string $country = null;
-    public ?string $country_code = null;
+    public ?string $countryCode = null;
     public ?string $host = null;
     public ?string $id = null;
     public ?int $load = null;

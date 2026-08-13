@@ -63,6 +63,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/request-ip",
                 ["parts"] = {
@@ -101,7 +102,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "country_code",
+            ["name"] = "countryCode",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 2,
@@ -172,6 +173,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/servers",
                 ["parts"] = {

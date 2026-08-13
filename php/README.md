@@ -35,7 +35,7 @@ $client = new SoftvpnMobileSDK();
 
 ```php
 try {
-    // load() returns the bare RequestInfo record (throws on error).
+    // load() returns the ENTITY — call data_get() for the RequestInfo record (throws on error).
     $requestinfo = $client->RequestInfo()->load();
     print_r($requestinfo);
 } catch (\Throwable $err) {
@@ -123,7 +123,8 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = SoftvpnMobileSDK::test();
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $requestinfo = $client->RequestInfo()->load();
 print_r($requestinfo);
 ```
@@ -224,7 +225,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -261,7 +262,7 @@ API path: `/request-ip`
 | --- | --- |
 | `city` |  |
 | `country` |  |
-| `country_code` |  |
+| `countryCode` |  |
 | `host` |  |
 | `id` |  |
 | `load` |  |
@@ -302,7 +303,7 @@ Create an instance: `$request_info = $client->RequestInfo();`
 #### Example: Load
 
 ```php
-// load() returns the bare RequestInfo record (throws on error).
+// load() returns the ENTITY — call data_get() for the RequestInfo record (throws on error).
 $request_info = $client->RequestInfo()->load();
 ```
 
@@ -323,7 +324,7 @@ Create an instance: `$server = $client->Server();`
 | --- | --- | --- |
 | `city` | `string` |  |
 | `country` | `string` |  |
-| `country_code` | `string` |  |
+| `countryCode` | `string` |  |
 | `host` | `string` |  |
 | `id` | `string` |  |
 | `load` | `int` |  |

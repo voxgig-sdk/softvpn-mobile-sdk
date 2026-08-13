@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from softvpnmobile_sdk.utility.voxgig_struct import voxgig_struct as vs
 from softvpnmobile_sdk import SoftvpnMobileSDK
-from core import helpers
+from softvpnmobile_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _request_info_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "SOFTVPNMOBILE_TEST_REQUEST_INFO_ENTID": {},
-        "SOFTVPNMOBILE_TEST_LIVE": "FALSE",
+        "SOFTVPN_MOBILE_TEST_REQUEST_INFO_ENTID": {},
+        "SOFTVPN_MOBILE_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("SOFTVPNMOBILE_TEST_LIVE") == "TRUE"
+    live = env.get("SOFTVPN_MOBILE_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

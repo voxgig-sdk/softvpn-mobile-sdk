@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = SoftvpnMobileSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = SoftvpnMobileSDK.test({
+  entity: {
+    request_info: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const requestinfo = await client.RequestInfo().load()
-// requestinfo is a bare RequestInfo populated with mock data
+// requestinfo is the RequestInfo entity, populated with mock data
+// — call requestinfo.data() for the record itself
 console.log(requestinfo)
 ```
 
@@ -183,7 +192,7 @@ require_once 'softvpnmobile_sdk.php';
 $client = new SoftvpnMobileSDK();
 
 
-// Load a specific requestinfo (returns the bare record; throws on error)
+// Load a specific requestinfo (returns the ENTITY; call data_get() for the record; throws on error)
 $requestinfo = $client->RequestInfo()->load();
 print_r($requestinfo);
 ```
@@ -211,7 +220,7 @@ require_relative "SoftvpnMobile_sdk"
 client = SoftvpnMobileSDK.new
 
 
-# Load a specific requestinfo (returns the bare record; raises on error)
+# Load a specific requestinfo (returns the ENTITY; call data_get for the record)
 requestinfo = client.RequestInfo.load()
 puts requestinfo
 ```
@@ -345,6 +354,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/softvpn](https://github.com/l0v3m0n3y/softvpn)
 

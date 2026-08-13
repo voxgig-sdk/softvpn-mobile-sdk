@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = SoftvpnMobileSDK.test()
 
 const requestinfo = await client.RequestInfo().load()
-// requestinfo is a bare entity populated with mock response data
+// requestinfo is the entity, populated with mock response data
+// — call requestinfo.data() for the record itself
 console.log(requestinfo)
 ```
 
@@ -303,7 +304,7 @@ API path: `/request-ip`
 | --- | --- |
 | `city` |  |
 | `country` |  |
-| `country_code` |  |
+| `countryCode` |  |
 | `host` |  |
 | `id` |  |
 | `load` |  |
@@ -364,7 +365,7 @@ Create an instance: `const server = client.Server()`
 | --- | --- | --- |
 | `city` | `string` |  |
 | `country` | `string` |  |
-| `country_code` | `string` |  |
+| `countryCode` | `string` |  |
 | `host` | `string` |  |
 | `id` | `string` |  |
 | `load` | `number` |  |

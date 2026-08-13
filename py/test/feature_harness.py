@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import SoftvpnMobileControl
-from core.error import SoftvpnMobileError
-from core.result import SoftvpnMobileResult
-from core.spec import SoftvpnMobileSpec
+from softvpnmobile_sdk.config import make_config
+from softvpnmobile_sdk.features import _make_feature
+from softvpnmobile_sdk.core.control import SoftvpnMobileControl
+from softvpnmobile_sdk.core.error import SoftvpnMobileError
+from softvpnmobile_sdk.core.result import SoftvpnMobileResult
+from softvpnmobile_sdk.core.spec import SoftvpnMobileSpec
 
 
 # True when this SDK was generated with the named feature.

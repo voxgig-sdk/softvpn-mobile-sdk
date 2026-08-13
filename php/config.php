@@ -69,6 +69,7 @@ class SoftvpnMobileConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/request-ip',
                   'parts' => [
@@ -107,7 +108,7 @@ class SoftvpnMobileConfig
             ],
             [
               'active' => true,
-              'name' => 'country_code',
+              'name' => 'countryCode',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 2,
@@ -178,6 +179,7 @@ class SoftvpnMobileConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/servers',
                   'parts' => [

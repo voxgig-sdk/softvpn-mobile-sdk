@@ -22,7 +22,7 @@ export interface RequestInfoLoadMatch {
 export interface Server {
   city?: string
   country?: string
-  country_code?: string
+  countryCode?: string
   host?: string
   id?: string
   load?: number
@@ -36,7 +36,7 @@ export interface Server {
 export interface ServerListMatch {
   city?: string
   country?: string
-  country_code?: string
+  countryCode?: string
   host?: string
   id?: string
   load?: number
