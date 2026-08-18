@@ -28,7 +28,7 @@ class SoftvpnMobileSDK
     utility = SoftvpnMobileUtility.new
     @_utility = utility
 
-    config = SoftvpnMobileConfig.make_config
+    config = SoftvpnMobileConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from softvpnmobile_sdk.config import make_config
+from softvpnmobile_sdk.config import shared_config
 from softvpnmobile_sdk.features import _make_feature
 from softvpnmobile_sdk.core.control import SoftvpnMobileControl
 from softvpnmobile_sdk.core.error import SoftvpnMobileError
@@ -24,7 +24,7 @@ from softvpnmobile_sdk.core.spec import SoftvpnMobileSpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 

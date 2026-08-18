@@ -40,7 +40,7 @@ class SoftvpnMobileSDK
         $utility = new SoftvpnMobileUtility();
         $this->_utility = $utility;
 
-        $config = SoftvpnMobileConfig::make_config();
+        $config = SoftvpnMobileConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,
