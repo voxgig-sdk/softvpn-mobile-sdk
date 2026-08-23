@@ -96,10 +96,10 @@ $request_info = $client->RequestInfo();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `string` | No |  |
-| `country` | `string` | No |  |
-| `ip` | `string` | No |  |
-| `region` | `string` | No |  |
+| `city` | `string` | No | City |
+| `country` | `string` | No | Country of the IP address |
+| `ip` | `string` | No | The IP address of the requester |
+| `region` | `string` | No | Region or state |
 
 ### Operations
 
@@ -151,17 +151,17 @@ $server = $client->Server();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `string` | No |  |
-| `country` | `string` | No |  |
-| `countryCode` | `string` | No |  |
-| `host` | `string` | No |  |
-| `id` | `string` | No |  |
-| `load` | `int` | No |  |
-| `name` | `string` | No |  |
-| `online` | `bool` | No |  |
-| `port` | `int` | No |  |
-| `premium` | `bool` | No |  |
-| `protocol` | `string` | No |  |
+| `city` | `string` | No | City where the server is located |
+| `country` | `string` | No | Country where the server is located |
+| `countryCode` | `string` | No | ISO country code |
+| `host` | `string` | No | Server hostname or IP address |
+| `id` | `string` | No | Unique identifier for the server |
+| `load` | `int` | No | Server load percentage |
+| `name` | `string` | No | Display name of the server |
+| `online` | `bool` | No | Whether the server is currently online |
+| `port` | `int` | No | Server port number |
+| `premium` | `bool` | No | Whether this is a premium server |
+| `protocol` | `string` | No | VPN protocol used by the server |
 
 ### Operations
 

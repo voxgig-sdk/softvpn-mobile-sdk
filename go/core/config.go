@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "SoftvpnMobile",
+			"slug": "softvpn-mobile",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -34,18 +37,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "city",
+						"short": "City",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country",
+						"short": "Country of the IP address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ip",
+						"short": "The IP address of the requester",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Region or state",
 						"type": "`$STRING`",
 					},
 				},
@@ -80,46 +87,57 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "city",
+						"short": "City where the server is located",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country",
+						"short": "Country where the server is located",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "countryCode",
+						"short": "ISO country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "host",
+						"short": "Server hostname or IP address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the server",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "load",
+						"short": "Server load percentage",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Display name of the server",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "online",
+						"short": "Whether the server is currently online",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "port",
+						"short": "Server port number",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "premium",
+						"short": "Whether this is a premium server",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "protocol",
+						"short": "VPN protocol used by the server",
 						"type": "`$STRING`",
 					},
 				},

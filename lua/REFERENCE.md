@@ -94,10 +94,10 @@ local request_info = client:RequestInfo(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `string` | No |  |
-| `country` | `string` | No |  |
-| `ip` | `string` | No |  |
-| `region` | `string` | No |  |
+| `city` | `string` | No | City |
+| `country` | `string` | No | Country of the IP address |
+| `ip` | `string` | No | The IP address of the requester |
+| `region` | `string` | No | Region or state |
 
 ### Operations
 
@@ -149,17 +149,17 @@ local server = client:Server(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `string` | No |  |
-| `country` | `string` | No |  |
-| `countryCode` | `string` | No |  |
-| `host` | `string` | No |  |
-| `id` | `string` | No |  |
-| `load` | `number` | No |  |
-| `name` | `string` | No |  |
-| `online` | `boolean` | No |  |
-| `port` | `number` | No |  |
-| `premium` | `boolean` | No |  |
-| `protocol` | `string` | No |  |
+| `city` | `string` | No | City where the server is located |
+| `country` | `string` | No | Country where the server is located |
+| `countryCode` | `string` | No | ISO country code |
+| `host` | `string` | No | Server hostname or IP address |
+| `id` | `string` | No | Unique identifier for the server |
+| `load` | `number` | No | Server load percentage |
+| `name` | `string` | No | Display name of the server |
+| `online` | `boolean` | No | Whether the server is currently online |
+| `port` | `number` | No | Server port number |
+| `premium` | `boolean` | No | Whether this is a premium server |
+| `protocol` | `string` | No | VPN protocol used by the server |
 
 ### Operations
 

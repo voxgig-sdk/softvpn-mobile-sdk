@@ -36,24 +36,28 @@
               "active": true,
               "name": "city",
               "req": false,
+              "short": "City",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "country",
               "req": false,
+              "short": "Country of the IP address",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ip",
               "req": false,
+              "short": "The IP address of the requester",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "region",
               "req": false,
+              "short": "Region or state",
               "type": "`$STRING`"
             }
           ],
@@ -95,66 +99,77 @@
               "active": true,
               "name": "city",
               "req": false,
+              "short": "City where the server is located",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "country",
               "req": false,
+              "short": "Country where the server is located",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "countryCode",
               "req": false,
+              "short": "ISO country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "host",
               "req": false,
+              "short": "Server hostname or IP address",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the server",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "load",
               "req": false,
+              "short": "Server load percentage",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Display name of the server",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "online",
               "req": false,
+              "short": "Whether the server is currently online",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "port",
               "req": false,
+              "short": "Server port number",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "premium",
               "req": false,
+              "short": "Whether this is a premium server",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "protocol",
               "req": false,
+              "short": "VPN protocol used by the server",
               "type": "`$STRING`"
             }
           ],

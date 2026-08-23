@@ -243,10 +243,10 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `ip` |  |
-| `region` |  |
+| `city` | City |
+| `country` | Country of the IP address |
+| `ip` | The IP address of the requester |
+| `region` | Region or state |
 
 Operations: Load.
 
@@ -256,17 +256,17 @@ API path: `/request-ip`
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `countryCode` |  |
-| `host` |  |
-| `id` |  |
-| `load` |  |
-| `name` |  |
-| `online` |  |
-| `port` |  |
-| `premium` |  |
-| `protocol` |  |
+| `city` | City where the server is located |
+| `country` | Country where the server is located |
+| `countryCode` | ISO country code |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `load` | Server load percentage |
+| `name` | Display name of the server |
+| `online` | Whether the server is currently online |
+| `port` | Server port number |
+| `premium` | Whether this is a premium server |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -291,10 +291,10 @@ Create an instance: `request_info = client.RequestInfo()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `str` |  |
-| `country` | `str` |  |
-| `ip` | `str` |  |
-| `region` | `str` |  |
+| `city` | `str` | City |
+| `country` | `str` | Country of the IP address |
+| `ip` | `str` | The IP address of the requester |
+| `region` | `str` | Region or state |
 
 #### Example: Load
 
@@ -317,17 +317,17 @@ Create an instance: `server = client.Server()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `str` |  |
-| `country` | `str` |  |
-| `countryCode` | `str` |  |
-| `host` | `str` |  |
-| `id` | `str` |  |
-| `load` | `int` |  |
-| `name` | `str` |  |
-| `online` | `bool` |  |
-| `port` | `int` |  |
-| `premium` | `bool` |  |
-| `protocol` | `str` |  |
+| `city` | `str` | City where the server is located |
+| `country` | `str` | Country where the server is located |
+| `countryCode` | `str` | ISO country code |
+| `host` | `str` | Server hostname or IP address |
+| `id` | `str` | Unique identifier for the server |
+| `load` | `int` | Server load percentage |
+| `name` | `str` | Display name of the server |
+| `online` | `bool` | Whether the server is currently online |
+| `port` | `int` | Server port number |
+| `premium` | `bool` | Whether this is a premium server |
+| `protocol` | `str` | VPN protocol used by the server |
 
 #### Example: List
 

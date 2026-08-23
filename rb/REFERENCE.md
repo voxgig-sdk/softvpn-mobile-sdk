@@ -97,10 +97,10 @@ request_info = client.RequestInfo
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `String` | No |  |
-| `country` | `String` | No |  |
-| `ip` | `String` | No |  |
-| `region` | `String` | No |  |
+| `city` | `String` | No | City |
+| `country` | `String` | No | Country of the IP address |
+| `ip` | `String` | No | The IP address of the requester |
+| `region` | `String` | No | Region or state |
 
 ### Operations
 
@@ -152,17 +152,17 @@ server = client.Server
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `String` | No |  |
-| `country` | `String` | No |  |
-| `countryCode` | `String` | No |  |
-| `host` | `String` | No |  |
-| `id` | `String` | No |  |
-| `load` | `Integer` | No |  |
-| `name` | `String` | No |  |
-| `online` | `Boolean` | No |  |
-| `port` | `Integer` | No |  |
-| `premium` | `Boolean` | No |  |
-| `protocol` | `String` | No |  |
+| `city` | `String` | No | City where the server is located |
+| `country` | `String` | No | Country where the server is located |
+| `countryCode` | `String` | No | ISO country code |
+| `host` | `String` | No | Server hostname or IP address |
+| `id` | `String` | No | Unique identifier for the server |
+| `load` | `Integer` | No | Server load percentage |
+| `name` | `String` | No | Display name of the server |
+| `online` | `Boolean` | No | Whether the server is currently online |
+| `port` | `Integer` | No | Server port number |
+| `premium` | `Boolean` | No | Whether this is a premium server |
+| `protocol` | `String` | No | VPN protocol used by the server |
 
 ### Operations
 

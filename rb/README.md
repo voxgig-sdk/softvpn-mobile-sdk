@@ -237,10 +237,10 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `ip` |  |
-| `region` |  |
+| `city` | City |
+| `country` | Country of the IP address |
+| `ip` | The IP address of the requester |
+| `region` | Region or state |
 
 Operations: Load.
 
@@ -250,17 +250,17 @@ API path: `/request-ip`
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `countryCode` |  |
-| `host` |  |
-| `id` |  |
-| `load` |  |
-| `name` |  |
-| `online` |  |
-| `port` |  |
-| `premium` |  |
-| `protocol` |  |
+| `city` | City where the server is located |
+| `country` | Country where the server is located |
+| `countryCode` | ISO country code |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `load` | Server load percentage |
+| `name` | Display name of the server |
+| `online` | Whether the server is currently online |
+| `port` | Server port number |
+| `premium` | Whether this is a premium server |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -285,10 +285,10 @@ Create an instance: `request_info = client.RequestInfo`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `String` |  |
-| `country` | `String` |  |
-| `ip` | `String` |  |
-| `region` | `String` |  |
+| `city` | `String` | City |
+| `country` | `String` | Country of the IP address |
+| `ip` | `String` | The IP address of the requester |
+| `region` | `String` | Region or state |
 
 #### Example: Load
 
@@ -312,17 +312,17 @@ Create an instance: `server = client.Server`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `String` |  |
-| `country` | `String` |  |
-| `countryCode` | `String` |  |
-| `host` | `String` |  |
-| `id` | `String` |  |
-| `load` | `Integer` |  |
-| `name` | `String` |  |
-| `online` | `Boolean` |  |
-| `port` | `Integer` |  |
-| `premium` | `Boolean` |  |
-| `protocol` | `String` |  |
+| `city` | `String` | City where the server is located |
+| `country` | `String` | Country where the server is located |
+| `countryCode` | `String` | ISO country code |
+| `host` | `String` | Server hostname or IP address |
+| `id` | `String` | Unique identifier for the server |
+| `load` | `Integer` | Server load percentage |
+| `name` | `String` | Display name of the server |
+| `online` | `Boolean` | Whether the server is currently online |
+| `port` | `Integer` | Server port number |
+| `premium` | `Boolean` | Whether this is a premium server |
+| `protocol` | `String` | VPN protocol used by the server |
 
 #### Example: List
 

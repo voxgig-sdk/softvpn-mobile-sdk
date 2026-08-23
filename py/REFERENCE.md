@@ -91,10 +91,10 @@ request_info = client.RequestInfo()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `str` | No |  |
-| `country` | `str` | No |  |
-| `ip` | `str` | No |  |
-| `region` | `str` | No |  |
+| `city` | `str` | No | City |
+| `country` | `str` | No | Country of the IP address |
+| `ip` | `str` | No | The IP address of the requester |
+| `region` | `str` | No | Region or state |
 
 ### Operations
 
@@ -145,17 +145,17 @@ server = client.Server()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `city` | `str` | No |  |
-| `country` | `str` | No |  |
-| `countryCode` | `str` | No |  |
-| `host` | `str` | No |  |
-| `id` | `str` | No |  |
-| `load` | `int` | No |  |
-| `name` | `str` | No |  |
-| `online` | `bool` | No |  |
-| `port` | `int` | No |  |
-| `premium` | `bool` | No |  |
-| `protocol` | `str` | No |  |
+| `city` | `str` | No | City where the server is located |
+| `country` | `str` | No | Country where the server is located |
+| `countryCode` | `str` | No | ISO country code |
+| `host` | `str` | No | Server hostname or IP address |
+| `id` | `str` | No | Unique identifier for the server |
+| `load` | `int` | No | Server load percentage |
+| `name` | `str` | No | Display name of the server |
+| `online` | `bool` | No | Whether the server is currently online |
+| `port` | `int` | No | Server port number |
+| `premium` | `bool` | No | Whether this is a premium server |
+| `protocol` | `str` | No | VPN protocol used by the server |
 
 ### Operations
 

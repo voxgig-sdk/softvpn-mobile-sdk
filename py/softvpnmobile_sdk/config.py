@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "SoftvpnMobile",
+            "slug": "softvpn-mobile",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -51,18 +54,22 @@ def make_config():
         "fields": [
           {
             "name": "city",
+            "short": "City",
             "type": "`$STRING`",
           },
           {
             "name": "country",
+            "short": "Country of the IP address",
             "type": "`$STRING`",
           },
           {
             "name": "ip",
+            "short": "The IP address of the requester",
             "type": "`$STRING`",
           },
           {
             "name": "region",
+            "short": "Region or state",
             "type": "`$STRING`",
           },
         ],
@@ -97,46 +104,57 @@ def make_config():
         "fields": [
           {
             "name": "city",
+            "short": "City where the server is located",
             "type": "`$STRING`",
           },
           {
             "name": "country",
+            "short": "Country where the server is located",
             "type": "`$STRING`",
           },
           {
             "name": "countryCode",
+            "short": "ISO country code",
             "type": "`$STRING`",
           },
           {
             "name": "host",
+            "short": "Server hostname or IP address",
             "type": "`$STRING`",
           },
           {
             "name": "id",
+            "short": "Unique identifier for the server",
             "type": "`$STRING`",
           },
           {
             "name": "load",
+            "short": "Server load percentage",
             "type": "`$INTEGER`",
           },
           {
             "name": "name",
+            "short": "Display name of the server",
             "type": "`$STRING`",
           },
           {
             "name": "online",
+            "short": "Whether the server is currently online",
             "type": "`$BOOLEAN`",
           },
           {
             "name": "port",
+            "short": "Server port number",
             "type": "`$INTEGER`",
           },
           {
             "name": "premium",
+            "short": "Whether this is a premium server",
             "type": "`$BOOLEAN`",
           },
           {
             "name": "protocol",
+            "short": "VPN protocol used by the server",
             "type": "`$STRING`",
           },
         ],

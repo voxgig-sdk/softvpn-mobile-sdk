@@ -228,10 +228,10 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `ip` |  |
-| `region` |  |
+| `city` | City |
+| `country` | Country of the IP address |
+| `ip` | The IP address of the requester |
+| `region` | Region or state |
 
 Operations: Load.
 
@@ -241,17 +241,17 @@ API path: `/request-ip`
 
 | Field | Description |
 | --- | --- |
-| `city` |  |
-| `country` |  |
-| `countryCode` |  |
-| `host` |  |
-| `id` |  |
-| `load` |  |
-| `name` |  |
-| `online` |  |
-| `port` |  |
-| `premium` |  |
-| `protocol` |  |
+| `city` | City where the server is located |
+| `country` | Country where the server is located |
+| `countryCode` | ISO country code |
+| `host` | Server hostname or IP address |
+| `id` | Unique identifier for the server |
+| `load` | Server load percentage |
+| `name` | Display name of the server |
+| `online` | Whether the server is currently online |
+| `port` | Server port number |
+| `premium` | Whether this is a premium server |
+| `protocol` | VPN protocol used by the server |
 
 Operations: List.
 
@@ -276,10 +276,10 @@ Create an instance: `local request_info = client:RequestInfo(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `string` |  |
-| `country` | `string` |  |
-| `ip` | `string` |  |
-| `region` | `string` |  |
+| `city` | `string` | City |
+| `country` | `string` | Country of the IP address |
+| `ip` | `string` | The IP address of the requester |
+| `region` | `string` | Region or state |
 
 #### Example: Load
 
@@ -302,17 +302,17 @@ Create an instance: `local server = client:Server(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `city` | `string` |  |
-| `country` | `string` |  |
-| `countryCode` | `string` |  |
-| `host` | `string` |  |
-| `id` | `string` |  |
-| `load` | `number` |  |
-| `name` | `string` |  |
-| `online` | `boolean` |  |
-| `port` | `number` |  |
-| `premium` | `boolean` |  |
-| `protocol` | `string` |  |
+| `city` | `string` | City where the server is located |
+| `country` | `string` | Country where the server is located |
+| `countryCode` | `string` | ISO country code |
+| `host` | `string` | Server hostname or IP address |
+| `id` | `string` | Unique identifier for the server |
+| `load` | `number` | Server load percentage |
+| `name` | `string` | Display name of the server |
+| `online` | `boolean` | Whether the server is currently online |
+| `port` | `number` | Server port number |
+| `premium` | `boolean` | Whether this is a premium server |
+| `protocol` | `string` | VPN protocol used by the server |
 
 #### Example: List
 
