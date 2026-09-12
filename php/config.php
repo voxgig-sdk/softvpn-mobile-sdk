@@ -90,13 +90,18 @@ class SoftvpnMobileConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/request-ip',
-                  'parts' => [
-                    'request-ip',
+                  'segments' => [
+                    [
+                      'lit' => 'request-ip',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'request-ip',
                   ],
                 ],
               ],
@@ -164,6 +169,10 @@ class SoftvpnMobileConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'server',
           'op' => [
             'list' => [
@@ -175,13 +184,18 @@ class SoftvpnMobileConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/servers',
-                  'parts' => [
-                    'servers',
+                  'segments' => [
+                    [
+                      'lit' => 'servers',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'servers',
                   ],
                 ],
               ],

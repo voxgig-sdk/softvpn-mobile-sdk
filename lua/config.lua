@@ -64,13 +64,18 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/request-ip",
-                ["parts"] = {
-                  "request-ip",
+                ["segments"] = {
+                  {
+                    ["lit"] = "request-ip",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "request-ip",
                 },
               },
             },
@@ -138,6 +143,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "server",
         ["op"] = {
           ["list"] = {
@@ -149,13 +158,18 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/servers",
-                ["parts"] = {
-                  "servers",
+                ["segments"] = {
+                  {
+                    ["lit"] = "servers",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "servers",
                 },
               },
             },
