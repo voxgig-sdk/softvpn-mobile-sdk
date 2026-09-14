@@ -947,7 +947,7 @@
             "registry": {
               "active": false,
               "name": "npm",
-              "package": "",
+              "package": "@voxgig-sdk/softvpn-mobile-sdk",
               "state": "pending",
               "url": "https://registry.npmjs.org",
               "vault": {

@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile'
+import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile-sdk'
 
 const client = new SoftvpnMobileSDK()
 ```
@@ -464,7 +464,7 @@ softvpn-mobile/
 Import the SDK from the package root:
 
 ```ts
-import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile'
+import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile-sdk'
 ```
 
 ### Entity state

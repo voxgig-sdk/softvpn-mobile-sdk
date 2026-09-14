@@ -105,7 +105,7 @@ local result, err = client:RequestInfo():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/softvpn-mobile` | publish pending — [install from git tag](https://github.com/voxgig-sdk/softvpn-mobile-sdk/releases) |
+| TypeScript | `@voxgig-sdk/softvpn-mobile-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/softvpn-mobile-sdk/releases) |
 | Python | `voxgig-sdk-softvpn-mobile` | publish pending — [install from git tag](https://github.com/voxgig-sdk/softvpn-mobile-sdk/releases) |
 | PHP | `voxgig-sdk/softvpn-mobile` | publish pending — [install from git tag](https://github.com/voxgig-sdk/softvpn-mobile-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/softvpn-mobile-sdk/go` | `go get github.com/voxgig-sdk/softvpn-mobile-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:RequestInfo():load()
 ### TypeScript
 
 ```ts
-import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile'
+import { SoftvpnMobileSDK } from '@voxgig-sdk/softvpn-mobile-sdk'
 
 const client = new SoftvpnMobileSDK()
 
