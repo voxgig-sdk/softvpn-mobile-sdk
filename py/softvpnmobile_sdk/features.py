@@ -1,12 +1,18 @@
 # SoftvpnMobile SDK feature factory
 
 from softvpnmobile_sdk.feature.base_feature import SoftvpnMobileBaseFeature
+from softvpnmobile_sdk.feature.ratelimit_feature import SoftvpnMobileRatelimitFeature
+from softvpnmobile_sdk.feature.retry_feature import SoftvpnMobileRetryFeature
 from softvpnmobile_sdk.feature.test_feature import SoftvpnMobileTestFeature
+from softvpnmobile_sdk.feature.timeout_feature import SoftvpnMobileTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: SoftvpnMobileBaseFeature(),
+    "ratelimit": lambda: SoftvpnMobileRatelimitFeature(),
+    "retry": lambda: SoftvpnMobileRetryFeature(),
     "test": lambda: SoftvpnMobileTestFeature(),
+    "timeout": lambda: SoftvpnMobileTimeoutFeature(),
 }
 
 

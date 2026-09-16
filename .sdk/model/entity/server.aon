@@ -84,6 +84,12 @@ main: kit: entity: server: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /servers"
+            json: "{\"operationId\":\"getServersList\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"city\":{\"description\":\"City where the server is located\",\"type\":\"string\"},\"country\":{\"description\":\"Country where the server is located\",\"type\":\"string\"},\"countryCode\":{\"description\":\"ISO country code\",\"type\":\"string\"},\"host\":{\"description\":\"Server hostname or IP address\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the server\",\"type\":\"string\"},\"load\":{\"description\":\"Server load percentage\",\"maximum\":100,\"minimum\":0,\"type\":\"integer\"},\"name\":{\"description\":\"Display name of the server\",\"type\":\"string\"},\"online\":{\"description\":\"Whether the server is currently online\",\"type\":\"boolean\"},\"port\":{\"description\":\"Server port number\",\"type\":\"integer\"},\"premium\":{\"description\":\"Whether this is a premium server\",\"type\":\"boolean\"},\"protocol\":{\"description\":\"VPN protocol used by the server\",\"enum\":[\"OpenVPN\",\"IKEv2\",\"WireGuard\",\"L2TP\"],\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with list of VPN servers\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Bad request\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/servers"
           segments: [

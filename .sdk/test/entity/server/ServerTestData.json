@@ -7,10 +7,10 @@
         "countryCode": "s70",
         "host": "s71",
         "id": "SERVER00",
-        "load": "s73",
+        "load": 115,
         "name": "s74",
         "online": false,
-        "port": "s76",
+        "port": 118,
         "premium": false,
         "protocol": "s78"
       },
@@ -20,10 +20,10 @@
         "countryCode": "sde",
         "host": "sdf",
         "id": "SERVER01",
-        "load": "se1",
+        "load": 225,
         "name": "se2",
         "online": false,
-        "port": "se4",
+        "port": 228,
         "premium": false,
         "protocol": "se6"
       },
@@ -33,10 +33,10 @@
         "countryCode": "s14c",
         "host": "s14d",
         "id": "SERVER02",
-        "load": "s14f",
+        "load": 335,
         "name": "s150",
         "online": false,
-        "port": "s152",
+        "port": 338,
         "premium": false,
         "protocol": "s154"
       }
@@ -49,12 +49,146 @@
         "country": "s1b9",
         "countryCode": "s1ba",
         "host": "s1bb",
-        "load": "s1bd",
+        "load": 445,
         "name": "s1be",
         "online": false,
-        "port": "s1c0",
+        "port": 448,
         "premium": false,
         "protocol": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /servers": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getServersList",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "city": {
+                        "description": "City where the server is located",
+                        "type": "string"
+                      },
+                      "country": {
+                        "description": "Country where the server is located",
+                        "type": "string"
+                      },
+                      "countryCode": {
+                        "description": "ISO country code",
+                        "type": "string"
+                      },
+                      "host": {
+                        "description": "Server hostname or IP address",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Unique identifier for the server",
+                        "type": "string"
+                      },
+                      "load": {
+                        "description": "Server load percentage",
+                        "maximum": 100,
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "description": "Display name of the server",
+                        "type": "string"
+                      },
+                      "online": {
+                        "description": "Whether the server is currently online",
+                        "type": "boolean"
+                      },
+                      "port": {
+                        "description": "Server port number",
+                        "type": "integer"
+                      },
+                      "premium": {
+                        "description": "Whether this is a premium server",
+                        "type": "boolean"
+                      },
+                      "protocol": {
+                        "description": "VPN protocol used by the server",
+                        "enum": [
+                          "OpenVPN",
+                          "IKEv2",
+                          "WireGuard",
+                          "L2TP"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful response with list of VPN servers"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    },
+                    "message": {
+                      "description": "Detailed error message",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    },
+                    "message": {
+                      "description": "Detailed error message",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }

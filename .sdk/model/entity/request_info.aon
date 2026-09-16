@@ -37,6 +37,12 @@ main: kit: entity: request_info: {
       name: "load"
       points: [
         {
+          contract: {
+            id: "GET /request-ip"
+            json: "{\"operationId\":\"getRequestIp\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"city\":{\"description\":\"City\",\"example\":\"San Francisco\",\"type\":\"string\"},\"country\":{\"description\":\"Country of the IP address\",\"example\":\"United States\",\"type\":\"string\"},\"ip\":{\"description\":\"The IP address of the requester\",\"example\":\"192.168.1.1\",\"type\":\"string\"},\"region\":{\"description\":\"Region or state\",\"example\":\"California\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Successful response with IP request information\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Bad request\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/request-ip"
           segments: [
