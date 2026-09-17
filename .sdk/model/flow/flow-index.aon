@@ -1,4 +1,4 @@
 # Flows
 
-@"BasicRequestInfoFlow.aon"
-@"BasicServerFlow.aon"
+@"./BasicRequestInfoFlow.aon"
+@"./BasicServerFlow.aon"

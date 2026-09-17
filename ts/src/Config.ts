@@ -127,12 +127,12 @@ class Config {
 
     entity: {
       
-      request_info: {
-      },
-
-      server: {
-      },
-
+        request_info: {
+        },
+  
+        server: {
+        },
+  
     }
   }
 
