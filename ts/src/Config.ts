@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -142,23 +135,27 @@ class Config {
       "fields": [
         {
           "name": "city",
-          "short": "City",
-          "type": "`$STRING`"
+          "title": "City",
+          "type": "`$STRING`",
+          "short": "City"
         },
         {
           "name": "country",
-          "short": "Country of the IP address",
-          "type": "`$STRING`"
+          "title": "Country",
+          "type": "`$STRING`",
+          "short": "Country of the IP address"
         },
         {
           "name": "ip",
-          "short": "The IP address of the requester",
-          "type": "`$STRING`"
+          "title": "Ip",
+          "type": "`$STRING`",
+          "short": "The IP address of the requester"
         },
         {
           "name": "region",
-          "short": "Region or state",
-          "type": "`$STRING`"
+          "title": "Region",
+          "type": "`$STRING`",
+          "short": "Region or state"
         }
       ],
       "name": "request_info",
@@ -168,7 +165,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/request-ip",
@@ -177,14 +173,16 @@ class Config {
                   "lit": "request-ip"
                 }
               ],
-              "select": {},
+              "parts": [
+                "request-ip"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "request-ip"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }
@@ -197,58 +195,69 @@ class Config {
       "fields": [
         {
           "name": "city",
-          "short": "City where the server is located",
-          "type": "`$STRING`"
+          "title": "City",
+          "type": "`$STRING`",
+          "short": "City where the server is located"
         },
         {
           "name": "country",
-          "short": "Country where the server is located",
-          "type": "`$STRING`"
+          "title": "Country",
+          "type": "`$STRING`",
+          "short": "Country where the server is located"
         },
         {
           "name": "countryCode",
-          "short": "ISO country code",
-          "type": "`$STRING`"
+          "title": "Country Code",
+          "type": "`$STRING`",
+          "short": "ISO country code"
         },
         {
           "name": "host",
-          "short": "Server hostname or IP address",
-          "type": "`$STRING`"
+          "title": "Host",
+          "type": "`$STRING`",
+          "short": "Server hostname or IP address"
         },
         {
           "name": "id",
-          "short": "Unique identifier for the server",
-          "type": "`$STRING`"
+          "title": "Id",
+          "type": "`$STRING`",
+          "short": "Unique identifier for the server"
         },
         {
           "name": "load",
-          "short": "Server load percentage",
-          "type": "`$INTEGER`"
+          "title": "Load",
+          "type": "`$INTEGER`",
+          "short": "Server load percentage"
         },
         {
           "name": "name",
-          "short": "Display name of the server",
-          "type": "`$STRING`"
+          "title": "Name",
+          "type": "`$STRING`",
+          "short": "Display name of the server"
         },
         {
           "name": "online",
-          "short": "Whether the server is currently online",
-          "type": "`$BOOLEAN`"
+          "title": "Online",
+          "type": "`$BOOLEAN`",
+          "short": "Whether the server is currently online"
         },
         {
           "name": "port",
-          "short": "Server port number",
-          "type": "`$INTEGER`"
+          "title": "Port",
+          "type": "`$INTEGER`",
+          "short": "Server port number"
         },
         {
           "name": "premium",
-          "short": "Whether this is a premium server",
-          "type": "`$BOOLEAN`"
+          "title": "Premium",
+          "type": "`$BOOLEAN`",
+          "short": "Whether this is a premium server"
         },
         {
           "name": "protocol",
-          "short": "VPN protocol used by the server",
-          "type": "`$STRING`"
+          "title": "Protocol",
+          "type": "`$STRING`",
+          "short": "VPN protocol used by the server"
         }
       ],
       "id": {
@@ -262,7 +271,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/servers",
@@ -271,14 +279,16 @@ class Config {
                   "lit": "servers"
                 }
               ],
-              "select": {},
+              "parts": [
+                "servers"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "servers"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }

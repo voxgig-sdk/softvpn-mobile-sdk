@@ -92,23 +92,27 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "city",
-						"short": "City",
+						"title": "City",
 						"type": "`$STRING`",
+						"short": "City",
 					},
 					map[string]any{
 						"name": "country",
-						"short": "Country of the IP address",
+						"title": "Country",
 						"type": "`$STRING`",
+						"short": "Country of the IP address",
 					},
 					map[string]any{
 						"name": "ip",
-						"short": "The IP address of the requester",
+						"title": "Ip",
 						"type": "`$STRING`",
+						"short": "The IP address of the requester",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Region or state",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Region or state",
 					},
 				},
 				"name": "request_info",
@@ -118,7 +122,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/request-ip",
@@ -127,14 +130,16 @@ func MakeConfig() map[string]any {
 										"lit": "request-ip",
 									},
 								},
-								"select": map[string]any{},
+								"parts": []any{
+									"request-ip",
+								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"request-ip",
-								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},
@@ -147,58 +152,69 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "city",
-						"short": "City where the server is located",
+						"title": "City",
 						"type": "`$STRING`",
+						"short": "City where the server is located",
 					},
 					map[string]any{
 						"name": "country",
-						"short": "Country where the server is located",
+						"title": "Country",
 						"type": "`$STRING`",
+						"short": "Country where the server is located",
 					},
 					map[string]any{
 						"name": "countryCode",
-						"short": "ISO country code",
+						"title": "Country Code",
 						"type": "`$STRING`",
+						"short": "ISO country code",
 					},
 					map[string]any{
 						"name": "host",
-						"short": "Server hostname or IP address",
+						"title": "Host",
 						"type": "`$STRING`",
+						"short": "Server hostname or IP address",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the server",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the server",
 					},
 					map[string]any{
 						"name": "load",
-						"short": "Server load percentage",
+						"title": "Load",
 						"type": "`$INTEGER`",
+						"short": "Server load percentage",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Display name of the server",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Display name of the server",
 					},
 					map[string]any{
 						"name": "online",
-						"short": "Whether the server is currently online",
+						"title": "Online",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the server is currently online",
 					},
 					map[string]any{
 						"name": "port",
-						"short": "Server port number",
+						"title": "Port",
 						"type": "`$INTEGER`",
+						"short": "Server port number",
 					},
 					map[string]any{
 						"name": "premium",
-						"short": "Whether this is a premium server",
+						"title": "Premium",
 						"type": "`$BOOLEAN`",
+						"short": "Whether this is a premium server",
 					},
 					map[string]any{
 						"name": "protocol",
-						"short": "VPN protocol used by the server",
+						"title": "Protocol",
 						"type": "`$STRING`",
+						"short": "VPN protocol used by the server",
 					},
 				},
 				"id": map[string]any{
@@ -212,7 +228,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/servers",
@@ -221,14 +236,16 @@ func MakeConfig() map[string]any {
 										"lit": "servers",
 									},
 								},
-								"select": map[string]any{},
+								"parts": []any{
+									"servers",
+								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"servers",
-								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

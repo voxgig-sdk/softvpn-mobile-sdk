@@ -19,7 +19,6 @@ import type {
   ServerListMatch,
 } from '../SoftvpnMobileTypes'
 
-// TODO: needs Entity superclass
 class ServerEntity extends SoftvpnMobileEntityBase<Server> {
 
   constructor(client: SoftvpnMobileSDK, entopts: any) {

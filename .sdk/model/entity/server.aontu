@@ -1,0 +1,121 @@
+# Entity: server
+
+main: kit: entity: server: {
+
+  alias: field: {}
+
+  fields: {
+    city: {
+      h: "City"
+      n: "city"
+      r: false
+      sh: "City where the server is located"
+      t: "`$STRING`"
+    }
+    country: {
+      h: "Country"
+      n: "country"
+      r: false
+      sh: "Country where the server is located"
+      t: "`$STRING`"
+    }
+    countryCode: {
+      h: "Country Code"
+      n: "countryCode"
+      r: false
+      sh: "ISO country code"
+      t: "`$STRING`"
+    }
+    host: {
+      h: "Host"
+      n: "host"
+      r: false
+      sh: "Server hostname or IP address"
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      sh: "Unique identifier for the server"
+      t: "`$STRING`"
+    }
+    load: {
+      h: "Load"
+      n: "load"
+      r: false
+      sh: "Server load percentage"
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Display name of the server"
+      t: "`$STRING`"
+    }
+    online: {
+      h: "Online"
+      n: "online"
+      r: false
+      sh: "Whether the server is currently online"
+      t: "`$BOOLEAN`"
+    }
+    port: {
+      h: "Port"
+      n: "port"
+      r: false
+      sh: "Server port number"
+      t: "`$INTEGER`"
+    }
+    premium: {
+      h: "Premium"
+      n: "premium"
+      r: false
+      sh: "Whether this is a premium server"
+      t: "`$BOOLEAN`"
+    }
+    protocol: {
+      h: "Protocol"
+      n: "protocol"
+      r: false
+      sh: "VPN protocol used by the server"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "server"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /servers"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/servers"
+          s: [
+            {
+              lit: "servers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

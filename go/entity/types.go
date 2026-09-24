@@ -1,7 +1,7 @@
 // Typed models for the SoftvpnMobile SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,10 +14,6 @@ import (
 
 // RequestInfo is the typed data model for the request_info entity.
 type RequestInfo struct {
-	City *string `json:"city,omitempty"`
-	Country *string `json:"country,omitempty"`
-	Ip *string `json:"ip,omitempty"`
-	Region *string `json:"region,omitempty"`
 }
 
 // RequestInfoLoadMatch is the typed request payload for RequestInfo.LoadTyped.
@@ -30,17 +26,6 @@ type RequestInfoLoadMatch struct {
 
 // Server is the typed data model for the server entity.
 type Server struct {
-	City *string `json:"city,omitempty"`
-	Country *string `json:"country,omitempty"`
-	CountryCode *string `json:"countryCode,omitempty"`
-	Host *string `json:"host,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Load *int `json:"load,omitempty"`
-	Name *string `json:"name,omitempty"`
-	Online *bool `json:"online,omitempty"`
-	Port *int `json:"port,omitempty"`
-	Premium *bool `json:"premium,omitempty"`
-	Protocol *string `json:"protocol,omitempty"`
 }
 
 // ServerListMatch is the typed request payload for Server.ListTyped.

@@ -24,42 +24,112 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "request_info": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "city",
-              "req": false,
-              "short": "City",
-              "type": "`$STRING`"
+          "fields": {
+            "city": {
+              "a": true,
+              "h": "City",
+              "n": "city",
+              "r": false,
+              "sh": "City",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "country",
-              "req": false,
-              "short": "Country of the IP address",
-              "type": "`$STRING`"
+            "country": {
+              "a": true,
+              "h": "Country",
+              "n": "country",
+              "r": false,
+              "sh": "Country of the IP address",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "ip",
-              "req": false,
-              "short": "The IP address of the requester",
-              "type": "`$STRING`"
+            "ip": {
+              "a": true,
+              "h": "Ip",
+              "n": "ip",
+              "r": false,
+              "sh": "The IP address of the requester",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "region",
-              "req": false,
-              "short": "Region or state",
-              "type": "`$STRING`"
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": false,
+              "sh": "Region or state",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "name": "request_info",
           "op": {
             "load": {
@@ -67,24 +137,24 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /request-ip",
-                    "json": "{\"operationId\":\"getRequestIp\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"city\":{\"description\":\"City\",\"example\":\"San Francisco\",\"type\":\"string\"},\"country\":{\"description\":\"Country of the IP address\",\"example\":\"United States\",\"type\":\"string\"},\"ip\":{\"description\":\"The IP address of the requester\",\"example\":\"192.168.1.1\",\"type\":\"string\"},\"region\":{\"description\":\"Region or state\",\"example\":\"California\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Successful response with IP request information\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Bad request\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/request-ip",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/request-ip",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "request-ip"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -101,85 +171,96 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "city",
-              "req": false,
-              "short": "City where the server is located",
-              "type": "`$STRING`"
+          "fields": {
+            "city": {
+              "a": true,
+              "h": "City",
+              "n": "city",
+              "r": false,
+              "sh": "City where the server is located",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "country",
-              "req": false,
-              "short": "Country where the server is located",
-              "type": "`$STRING`"
+            "country": {
+              "a": true,
+              "h": "Country",
+              "n": "country",
+              "r": false,
+              "sh": "Country where the server is located",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "countryCode",
-              "req": false,
-              "short": "ISO country code",
-              "type": "`$STRING`"
+            "countryCode": {
+              "a": true,
+              "h": "Country Code",
+              "n": "countryCode",
+              "r": false,
+              "sh": "ISO country code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "host",
-              "req": false,
-              "short": "Server hostname or IP address",
-              "type": "`$STRING`"
+            "host": {
+              "a": true,
+              "h": "Host",
+              "n": "host",
+              "r": false,
+              "sh": "Server hostname or IP address",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "short": "Unique identifier for the server",
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "sh": "Unique identifier for the server",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "load",
-              "req": false,
-              "short": "Server load percentage",
-              "type": "`$INTEGER`"
+            "load": {
+              "a": true,
+              "h": "Load",
+              "n": "load",
+              "r": false,
+              "sh": "Server load percentage",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "short": "Display name of the server",
-              "type": "`$STRING`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "sh": "Display name of the server",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "online",
-              "req": false,
-              "short": "Whether the server is currently online",
-              "type": "`$BOOLEAN`"
+            "online": {
+              "a": true,
+              "h": "Online",
+              "n": "online",
+              "r": false,
+              "sh": "Whether the server is currently online",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "port",
-              "req": false,
-              "short": "Server port number",
-              "type": "`$INTEGER`"
+            "port": {
+              "a": true,
+              "h": "Port",
+              "n": "port",
+              "r": false,
+              "sh": "Server port number",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "premium",
-              "req": false,
-              "short": "Whether this is a premium server",
-              "type": "`$BOOLEAN`"
+            "premium": {
+              "a": true,
+              "h": "Premium",
+              "n": "premium",
+              "r": false,
+              "sh": "Whether this is a premium server",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "protocol",
-              "req": false,
-              "short": "VPN protocol used by the server",
-              "type": "`$STRING`"
+            "protocol": {
+              "a": true,
+              "h": "Protocol",
+              "n": "protocol",
+              "r": false,
+              "sh": "VPN protocol used by the server",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -191,24 +272,24 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /servers",
-                    "json": "{\"operationId\":\"getServersList\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"city\":{\"description\":\"City where the server is located\",\"type\":\"string\"},\"country\":{\"description\":\"Country where the server is located\",\"type\":\"string\"},\"countryCode\":{\"description\":\"ISO country code\",\"type\":\"string\"},\"host\":{\"description\":\"Server hostname or IP address\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the server\",\"type\":\"string\"},\"load\":{\"description\":\"Server load percentage\",\"maximum\":100,\"minimum\":0,\"type\":\"integer\"},\"name\":{\"description\":\"Display name of the server\",\"type\":\"string\"},\"online\":{\"description\":\"Whether the server is currently online\",\"type\":\"boolean\"},\"port\":{\"description\":\"Server port number\",\"type\":\"integer\"},\"premium\":{\"description\":\"Whether this is a premium server\",\"type\":\"boolean\"},\"protocol\":{\"description\":\"VPN protocol used by the server\",\"enum\":[\"OpenVPN\",\"IKEv2\",\"WireGuard\",\"L2TP\"],\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with list of VPN servers\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Bad request\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"string\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"},\"message\":{\"description\":\"Detailed error message\",\"type\":\"string\"}},\"required\":[\"error\"],\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/servers",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/servers",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "servers"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -637,17 +718,17 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "request_info_ref01",
                 "srcdatavar": "request_info_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {},
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {
@@ -667,13 +748,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {

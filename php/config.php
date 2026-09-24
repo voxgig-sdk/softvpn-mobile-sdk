@@ -114,23 +114,27 @@ class SoftvpnMobileConfig
           'fields' => [
             [
               'name' => 'city',
-              'short' => 'City',
+              'title' => 'City',
               'type' => '`$STRING`',
+              'short' => 'City',
             ],
             [
               'name' => 'country',
-              'short' => 'Country of the IP address',
+              'title' => 'Country',
               'type' => '`$STRING`',
+              'short' => 'Country of the IP address',
             ],
             [
               'name' => 'ip',
-              'short' => 'The IP address of the requester',
+              'title' => 'Ip',
               'type' => '`$STRING`',
+              'short' => 'The IP address of the requester',
             ],
             [
               'name' => 'region',
-              'short' => 'Region or state',
+              'title' => 'Region',
               'type' => '`$STRING`',
+              'short' => 'Region or state',
             ],
           ],
           'name' => 'request_info',
@@ -140,7 +144,6 @@ class SoftvpnMobileConfig
               'name' => 'load',
               'points' => [
                 [
-                  'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/request-ip',
@@ -149,14 +152,16 @@ class SoftvpnMobileConfig
                       'lit' => 'request-ip',
                     ],
                   ],
-                  'select' => [],
+                  'parts' => [
+                    'request-ip',
+                  ],
+                  'rename' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
                   ],
-                  'parts' => [
-                    'request-ip',
-                  ],
+                  'args' => [],
+                  'select' => [],
                 ],
               ],
             ],
@@ -169,58 +174,69 @@ class SoftvpnMobileConfig
           'fields' => [
             [
               'name' => 'city',
-              'short' => 'City where the server is located',
+              'title' => 'City',
               'type' => '`$STRING`',
+              'short' => 'City where the server is located',
             ],
             [
               'name' => 'country',
-              'short' => 'Country where the server is located',
+              'title' => 'Country',
               'type' => '`$STRING`',
+              'short' => 'Country where the server is located',
             ],
             [
               'name' => 'countryCode',
-              'short' => 'ISO country code',
+              'title' => 'Country Code',
               'type' => '`$STRING`',
+              'short' => 'ISO country code',
             ],
             [
               'name' => 'host',
-              'short' => 'Server hostname or IP address',
+              'title' => 'Host',
               'type' => '`$STRING`',
+              'short' => 'Server hostname or IP address',
             ],
             [
               'name' => 'id',
-              'short' => 'Unique identifier for the server',
+              'title' => 'Id',
               'type' => '`$STRING`',
+              'short' => 'Unique identifier for the server',
             ],
             [
               'name' => 'load',
-              'short' => 'Server load percentage',
+              'title' => 'Load',
               'type' => '`$INTEGER`',
+              'short' => 'Server load percentage',
             ],
             [
               'name' => 'name',
-              'short' => 'Display name of the server',
+              'title' => 'Name',
               'type' => '`$STRING`',
+              'short' => 'Display name of the server',
             ],
             [
               'name' => 'online',
-              'short' => 'Whether the server is currently online',
+              'title' => 'Online',
               'type' => '`$BOOLEAN`',
+              'short' => 'Whether the server is currently online',
             ],
             [
               'name' => 'port',
-              'short' => 'Server port number',
+              'title' => 'Port',
               'type' => '`$INTEGER`',
+              'short' => 'Server port number',
             ],
             [
               'name' => 'premium',
-              'short' => 'Whether this is a premium server',
+              'title' => 'Premium',
               'type' => '`$BOOLEAN`',
+              'short' => 'Whether this is a premium server',
             ],
             [
               'name' => 'protocol',
-              'short' => 'VPN protocol used by the server',
+              'title' => 'Protocol',
               'type' => '`$STRING`',
+              'short' => 'VPN protocol used by the server',
             ],
           ],
           'id' => [
@@ -234,7 +250,6 @@ class SoftvpnMobileConfig
               'name' => 'list',
               'points' => [
                 [
-                  'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/servers',
@@ -243,14 +258,16 @@ class SoftvpnMobileConfig
                       'lit' => 'servers',
                     ],
                   ],
-                  'select' => [],
+                  'parts' => [
+                    'servers',
+                  ],
+                  'rename' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
                   ],
-                  'parts' => [
-                    'servers',
-                  ],
+                  'args' => [],
+                  'select' => [],
                 ],
               ],
             ],

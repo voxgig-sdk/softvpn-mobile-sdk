@@ -1,0 +1,28 @@
+# BasicRequestInfoFlow
+
+main: kit: flow: BasicRequestInfoFlow:
+{
+  entity: "request_info",
+  kind: "basic",
+  name: "BasicRequestInfoFlow",
+  step: [
+    {
+      i: {
+        ref: "request_info_ref01",
+        srcdatavar: "request_info_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-request_info_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRequestInfoFlow"
+}

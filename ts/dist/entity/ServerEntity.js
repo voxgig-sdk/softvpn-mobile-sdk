@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServerEntity = void 0;
 const SoftvpnMobileEntityBase_1 = require("../SoftvpnMobileEntityBase");
-// TODO: needs Entity superclass
 class ServerEntity extends SoftvpnMobileEntityBase_1.SoftvpnMobileEntityBase {
     constructor(client, entopts) {
         super(client, entopts);
