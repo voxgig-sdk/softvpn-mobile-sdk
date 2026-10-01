@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 SoftvpnMobileUtility.registrar = ->(u) {
   u.clean = SoftvpnMobileUtilities::Clean
+  u.clean_add = SoftvpnMobileUtilities::CleanAdd
+  u.clean_explain = SoftvpnMobileUtilities::CleanExplain
   u.done = SoftvpnMobileUtilities::Done
   u.make_error = SoftvpnMobileUtilities::MakeError
   u.feature_add = SoftvpnMobileUtilities::FeatureAdd

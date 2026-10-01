@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 SoftvpnMobileUtility::setRegistrar(function (SoftvpnMobileUtility $u): void {
     $u->clean = [SoftvpnMobileClean::class, 'call'];
+    $u->clean_add = [SoftvpnMobileClean::class, 'add'];
+    $u->clean_explain = [SoftvpnMobileDone::class, 'clean_explain'];
     $u->done = [SoftvpnMobileDone::class, 'call'];
     $u->make_error = [SoftvpnMobileMakeError::class, 'call'];
     $u->feature_add = [SoftvpnMobileFeatureAdd::class, 'call'];
