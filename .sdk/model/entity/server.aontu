@@ -102,6 +102,10 @@ main: kit: entity: server: {
           }
           m: "GET"
           o: "/servers"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "servers"

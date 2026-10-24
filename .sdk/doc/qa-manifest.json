@@ -3,5 +3,22 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "City",
+      "City where the server is located",
+      "Country of the IP address",
+      "Country where the server is located",
+      "ISO country code",
+      "Region or state",
+      "Server hostname or IP address",
+      "SoftVPN API Server",
+      "Successful response with IP request information",
+      "Successful response with list of VPN servers",
+      "The IP address of the requester",
+      "This API provides access to the SoftVPN mobile application, offering functionalities such as retrieving a list of VPN servers. It is designed for developers looking to integrate SoftVPN features into their applications quickly and effectively.",
+      "Unique identifier for the server"
+    ]
+  }
 }

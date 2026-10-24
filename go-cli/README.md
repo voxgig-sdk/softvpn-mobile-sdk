@@ -21,6 +21,7 @@ export SOFTVPN_MOBILE_APIKEY=sk_live_xxx
 # 4. Each command line is ONE boru expression, run against the API:
 ./softvpn-mobile-cli load 1 request_info            # {id:1} shorthand
 ./softvpn-mobile-cli load '{id:1}' request_info       # explicit match map
+./softvpn-mobile-cli list server
 
 # 5. Override the API base URL for a single call
 SOFTVPN_MOBILE_BASE=https://api.example.com ./softvpn-mobile-cli load 1 request_info

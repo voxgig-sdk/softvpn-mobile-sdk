@@ -1,5 +1,5 @@
 # SoftvpnMobile SDK utility: make_fetch_def
-require_relative 'struct/voxgig_struct'
+require_relative 'media'
 require_relative '../core/result'
 module SoftvpnMobileUtilities
   MakeFetchDef = ->(ctx) {
@@ -15,9 +15,7 @@ module SoftvpnMobileUtilities
     spec.url = url
 
     fetchdef = { "url" => url, "method" => spec.method, "headers" => spec.headers }
-    if spec.body
-      fetchdef["body"] = spec.body.is_a?(Hash) ? VoxgigStruct.jsonify(spec.body) : spec.body
-    end
+    fetchdef["body"] = SoftvpnMobileUtilities.request_body(ctx.point, spec.body) unless spec.body.nil?
 
     return fetchdef, nil
   }

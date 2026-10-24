@@ -48,6 +48,10 @@ main: kit: entity: request_info: {
           }
           m: "GET"
           o: "/request-ip"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "request-ip"
